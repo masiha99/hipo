@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipo Games</title>
+
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Snake/Flappy Bird specific -->
+    <link rel="stylesheet" href="snake.css">
+
+     <!-- chill flapc -->
+
+    <link rel="stylesheet" href="chillflp.css">
+
+    <!-- JS files -->
+    <script src="script.js" defer></script>  <!-- Dino -->
+    <script src="sc.js" defer></script>      <!-- Snake/Flappy Bird logic -->
+    <script src="chillflap.js" defer></script>
+    <script src="menu.js" defer></script>    <!-- Menu control -->
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <div id="menu">
+        <h1>🎮 Hipo Game Hub</h1>
+        <button id="dinoBtn">🦖 Dino</button>
+        <button id="snakeBtn">🐍 Flappy Bird</button>
+        <button id="chillflapBtn">🐍 chill Flappy Bird</button>
+    </div>
+
+<div id="dinoGame" style="display:none;">
+    <div id="game">
+        <div id="dino"></div>
+        <div id="rock"></div>
+    </div>
+    <h1 id="score">0</h1>
+</div>
+
+
+        <!-- chillflap -->
+    <div id="chillflapGame" style="display:none;">
+        <canvas id="board1"></canvas>
+
+    </div>
+
+
+
+    <!-- SNAKE / FLAPPY BIRD GAME -->
+    <div id="snakeGame" style="display:none;">
+        <canvas id="board"></canvas>
+
+    </div>
+
+    <!-- BACK BUTTON -->
+    <button id="backBtn" style="display:none;">⬅ Back to Menu</button>
+
+</body>
+</html>
