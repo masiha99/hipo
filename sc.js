@@ -95,7 +95,7 @@ function update() {
     for (let i = 0; i < pipeArray.length; i++) {
         let pipe = pipeArray[i];
         pipe.x += velocityX;
-        context.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height);
+    context.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height);
 
         if (!pipe.passed && bird.x > pipe.x + pipe.width) {
             flapscore += 0.5
@@ -172,4 +172,5 @@ function detectCollision(a, b) {
            a.x + a.width > b.x &&   // a's top right corner passes b's top left corner
            a.y < b.y + b.height &&  // a's top left corner doesn't reach b's bottom left corner
            a.y + a.height > b.y;    // a's bottom left corner passes b's top left corner
+
 }
