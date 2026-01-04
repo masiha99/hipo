@@ -168,7 +168,7 @@ function placePipes() {
 }
 
 function moveBird(e) {
-    if (e.code == "Space" || e.code == "ArrowUp") {
+    if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") {
         if (!gameStarted) gameStarted = true;
         velocityY = jumpStrength;
 
@@ -188,3 +188,4 @@ function detectCollision(a, b) {
            a.y < b.y + b.height &&
            a.y + a.height > b.y;
 }
+
