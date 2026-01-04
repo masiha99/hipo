@@ -38,6 +38,12 @@ let jumpStrength = -3.9
 let gameOver = false;
 let flapscore = 0;
 
+let fps = 30;
+let now;
+let then = Date.now();
+let interval = 1000 / fps;
+let delta;
+
 window.onload = function () {
     board = document.getElementById("board");
     board.height = boardHeight;
@@ -68,6 +74,13 @@ window.onload = function () {
 let gameStarted = false;
 function update() {
     requestAnimationFrame(update);
+
+    now = Date.now();
+    delta = now - then;
+
+    if (delta > interval) {
+        then = now - (delta % interval);
+    }
 
     if (gameOver) {
         return;
@@ -172,5 +185,4 @@ function detectCollision(a, b) {
            a.x + a.width > b.x &&   // a's top right corner passes b's top left corner
            a.y < b.y + b.height &&  // a's top left corner doesn't reach b's bottom left corner
            a.y + a.height > b.y;    // a's bottom left corner passes b's top left corner
-
 }
